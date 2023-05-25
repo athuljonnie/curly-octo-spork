@@ -1,0 +1,31 @@
+<section>
+    <div class="container">
+        <div class="row mt-4">
+            <a href="/admin/add-user" class="btn btn-primary w-25 ms-3">Add USER</a>
+        </div>
+        <table class="table mt-5">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col"></th>
+ 
+
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <td>{{this.Name}}</td> 
+      <td>{{this.Email}}</td>
+      <td> 
+      <a href="/admin/edit-user/{{this._id}}" class="btn btn-primary w-25 ms-auto">Edit USER</a>
+      <a href="/admin/delete-user/{{this._id}}" class="btn btn-danger w-25 ms-3">Delete USER</a>
+</td>
+  
+    {{/each}}
+
+  </tbody>
+</table>
+    </div>
+</section>
